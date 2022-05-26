@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap{
+            background-color: lightgray;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box{
+            width: 30%;
+            height: 400px;
+            background-color: teal;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+    
+
+
+    <div class="wrap">
+
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+
+    </div>
+
+    <script>
+
+        // *문제
+        // 1. 새로운 p 태그 만들기
+        // 2. 새로만든 p 안쪽으로 a태그에 네이버 경로 만들기
+        // 3. 첫번째 자식은 삭제
+
+
+        const wrapEl = document.querySelector('.wrap')
+        const box_1El = document.querySelector('.box:first-child')
+        const pEl = document.createElement('p')
+
+        wrapEl.appendChild(pEl)
+
+        pEl.innerHTML = `<a href="http://naver.com">네이버</a>`
+        
+        console.log(wrapEl)
+
+        wrapEl.removeChild(box_1El)
+        
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
